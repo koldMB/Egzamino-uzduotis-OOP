@@ -41,7 +41,7 @@ void nuoroda(map<string, vector<int>>& wordPositions)
         // Pašalinti skyrybos ženklus iš pabaigos: . , ) : ; ! ?
         while (!result.empty()) {
             char c = result.back();
-            if (c == '.' || c == ',' || c == ')' || c == ':' || c == ';' || c == '!' || c == '?') {
+            if (c == '.' || c == ',' || c == ')' || c == ':' || c == ';' || c == '!' || c == '?' || c == ']') {
                 result.pop_back();
             } else {
                 break;
@@ -51,7 +51,7 @@ void nuoroda(map<string, vector<int>>& wordPositions)
         // Pašalinti skyrybos ženklus iš pradžios: (
         while (!result.empty()) {
             char c = result.front();
-            if (c == '(') {
+            if (c == '(' || c =='[') {
                 result = result.substr(1);
             } else {
                 break;
